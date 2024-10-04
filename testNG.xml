@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BetaSuite" parallel="tests" thread-count="2" preserve-order="true">
+    <listeners>
+        <listener class-name="com.celcius.wms_cel1.generic.RetryListener"/>
+    </listeners>
+    <test verbose="1" name="WMS Automation">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.celcius.wms_cel1.testcase_layer.LoginPageTest"/>
+        </classes>
+    </test>
+</suite>
